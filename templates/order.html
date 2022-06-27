@@ -1,0 +1,31 @@
+<html>
+<body>
+    <form action = "{{ url_for('create_order') }}" method = "POST">
+
+        <! First Name field>
+        <label for="firstName">First name:</label><br>
+        <input type="text" id="firstName" name="firstName" value=""/><br>
+
+        <! Last Name field>
+        <label for="lastName">Last name:</label><br>
+        <input type="text" id="lastName" name="lastName" value=""/><br>
+
+        <! Order type field>
+        <label for="orderType">Order Type:</label><br>
+        <select id="orderType" name="orderType">
+        <option value="single">Single</option>
+            <option value="multiple">Multiple</option></select><br>
+
+        <! Budget field>
+        <label for="budget">Budget:</label><br>
+        <input type="number" id="budget" name="budget" min="1" max="5000" value=""/><br>
+
+        <! Deadline field>
+        <label for="deadline">Deadline:</label><br>
+        <input type="date" id="deadline" name="deadline"/><br>
+
+        <input type="submit" value="Create Order"/>
+
+    </form>
+</body>
+</html>

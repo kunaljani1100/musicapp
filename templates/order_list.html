@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+   <body>
+
+      <table border = 1>
+         <thead>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Order Type</td>
+            <td>Budget</td>
+            <td>Deadline</td>
+         </thead>
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row["firstName"]}}</td>
+               <td>{{row["lastName"]}}</td>
+               <td> {{ row["orderType"]}}</td>
+               <td>{{row['budget']}}</td>
+                <td>{{row['deadline']}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+
+   </body>
+</html>
